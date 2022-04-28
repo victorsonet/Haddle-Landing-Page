@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --clr-violet: hsl(257, 40%, 49%);
+    --clr-soft-magenta: hsl(300, 69%, 71%);
+    --ff-headings: 'Poppins';
+    --ff-body: 'Open Sans';
+    --fw-p400: 400;
+    --fw-p600: 600;
+    --fw-os400: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-size: 18px;
+    min-height: 100vh;
+    max-width: 100%;
+    font-family: var(--ff-body);
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--clr-violet);
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-desktop.svg);
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    grid-template-rows: 3fr 10fr 1fr;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 5rem 2rem 5rem;
+}
+
+header img {
+    width: 28%;
+}
+
+.hero-section {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 95%;
+}
+
+.hero-section img {
+    width: 100%;
+}
+
+.text-section {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 100%;
+}
+
+.section-title {
+    color: white;
+    font-size: 2.5rem;
+    padding: 2rem 0rem 2rem 0rem;
+    font-family: var(--ff-headings);
+}
+
+.section-btn {
+    background: white;
+    padding: 1rem 0rem;
+    width: 35%;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.section-btn:hover {
+    background: var(--clr-soft-magenta);
+}
+
+.section-btn a:hover {
+    color: white;
+}
+
+.section-btn a {
+    color: var(--clr-violet);
+    text-decoration: none;
+}
+
+.section-subtext {
+    color: white;
+}
+
+.social-section {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.social-section i {
+    padding: 1rem;
+    color: white;
+}
+
+.social-section i:hover {
+    color: var(--clr-soft-magenta)
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+    
+    body::after {
+        content: '';
+        background: url(../images/bg-mobile.svg);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 95%;
+        min-height: 100vh;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    .hero-section img {
+        margin-left: .5rem;
+    }
+    
+    .text-section {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .text-section h1 {
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 2.5rem;
+    }
+
+    .text-section p {
+        text-align: center;
+    }
+
+    .section-btn {
+        width: 60%;
+        padding-top: .5rem;
+        padding-bottom: .7rem;
+        align-self: center;
+    }
+
+    .section-btn a {
+        font-size: .9rem;
+    }
+
+    .social-section {
+        margin-top: 5rem;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+    
+    body::after {
+        content: '';
+        background: url(../images/bg-mobile.svg);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 85%;
+        min-height: 100vh;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    .hero-section img {
+        margin-left: .5rem;
+    }
+    
+    .text-section {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .text-section h1 {
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 2.5rem;
+    }
+
+    .text-section p {
+        text-align: center;
+    }
+
+    .section-btn {
+        width: 60%;
+        padding-top: .5rem;
+        padding-bottom: .7rem;
+        align-self: center;
+    }
+
+    .section-btn a {
+        font-size: .9rem;
+    }
+
+    .social-section {
+        margin-top: 5rem;
+        justify-content: center;
+    }
+
+    
+
+}
