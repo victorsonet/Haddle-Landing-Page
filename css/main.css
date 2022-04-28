@@ -52,11 +52,15 @@ body::after {
 main {
     display: grid;
     grid-template-columns: 1fr .7fr;
-    grid-template-rows: 3fr 10fr 1fr;
+    grid-template-rows: 2fr 6fr 2fr;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 3rem 5rem 2rem 5rem;
+}
+
+header {
+    margin-bottom: 2rem;
 }
 
 header img {
@@ -133,6 +137,10 @@ header img {
 
 @media only screen and (max-width: 1000px) and (min-width: 500px) {
     
+    body {
+        min-height: 100vh;
+    }
+
     body::after {
         content: '';
         background: url(../images/bg-mobile.svg);
@@ -144,10 +152,11 @@ header img {
         justify-content: center;
         padding: 0;
         width: 95%;
-        min-height: 100vh;
+        height: 100%;
     }
 
     header {
+        margin-top: 1rem;
         margin-bottom: 4rem;
     }
 
@@ -188,8 +197,9 @@ header img {
     }
 
     .social-section {
-        margin-top: 5rem;
+        margin-top: 4rem;
         justify-content: center;
+        margin-bottom: 1rem;
     }
 }
 
@@ -200,16 +210,21 @@ header img {
         background: url(../images/bg-mobile.svg);
     }
 
+    body {
+        min-height: 100vh;
+    }
+
     main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 0;
         width: 85%;
-        min-height: 100vh;
+        height: 100%;
     }
 
     header {
+        margin-top: 1rem;
         margin-bottom: 4rem;
     }
 
@@ -251,6 +266,7 @@ header img {
 
     .social-section {
         margin-top: 5rem;
+        margin-bottom: 1rem;
         justify-content: center;
     }
 
